@@ -1,0 +1,15 @@
+[package]
+name = "surrealdb-issue-2862-resource-busy"
+version = "0.0.0"
+edition = "2021"
+authors = ["Cameron <cameron@drivenow.com.au>"]
+
+[dependencies]
+tokio = { version = "1.0", features = [
+    "rt-multi-thread",
+    "macros",
+    "sync",
+    "time",
+    "full",
+] }
+surrealdb = { git = "https://github.com/surrealdb/surrealdb.git", commit = "9ead2cdbb62d92d40a777715fb2cd4816e537a60" }
